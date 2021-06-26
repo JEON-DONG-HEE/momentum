@@ -1,29 +1,34 @@
-// 요일과 같이 각 요소들이 같은 성격의 데이터로 설명이 필요없을 때는 Array를 쓰는게 좋지만,
-// 사람의 특성과 같이 여러가지 다른 성격의 데이터로 구성되어 있어 설명이 필요할 때는
-// 객체를 만들어서 property: value 로 관리하는 것이 직관적이고 관리하기 쉽다
+function sayHello(catsName, age) {
+    console.log("Hello My Name is " + catsName + "and i " + age + " years old");
+}
+
+sayHello("DD", 1);
+sayHello("TT", 2);
+sayHello("LULU", 3);
+
+
+function plus(firstNum, secondNum) {
+    console.log(firstNum + secondNum);
+}
+
+function devide(firstNum, secondNum) {
+    console.log(firstNum / secondNum);
+}
+
+plus(10, 5);
+devide(10, 3)
+
 const player = {
-    name: "JDH",
-    point: 10000,
-    fat: true,
+    name: "Donghee",
+    sayHello: function(userName, age) {
+        console.log("Hello my name is " + userName + " and i am " + age);
+    },
 };
 
-console.log(player);
-console.log(player.name);
-console.log(player['point']);
 
-player.fat = false;
+player.sayHello("Donghee", 20);
+player.sayHello("LULU", 2);
 
-console.log(player);
 
-player.lastName = 'Tamato';
 
-console.log(player);
-
-player.point = player.point + 10;
-
-console.log(player);
-
-// const 는 상수이므로 변할 수 없다. 이렇게 객체를 변경하는 것은 에러가 나지만
-// player.fat = false; 처럼 객체가 가지고 있는 프로퍼티를 변경하는 것은 허용된다.
-player = false;     
 
