@@ -1,34 +1,22 @@
-function sayHello(catsName, age) {
-    console.log("Hello My Name is " + catsName + "and i " + age + " years old");
-}
-
-sayHello("DD", 1);
-sayHello("TT", 2);
-sayHello("LULU", 3);
-
-
-function plus(firstNum, secondNum) {
-    console.log(firstNum + secondNum);
-}
-
-function devide(firstNum, secondNum) {
-    console.log(firstNum / secondNum);
-}
-
-plus(10, 5);
-devide(10, 3)
-
-const player = {
-    name: "Donghee",
-    sayHello: function(userName, age) {
-        console.log("Hello my name is " + userName + " and i am " + age);
+const calculator = {
+    calPlus : function(num1, num2) {
+        console.log('안녕');
+        return num1 + num2;
+        console.log('안녕2');
     },
+    calMinus : function(num1, num2) {
+        console.log("두 수의 차는 " + (num1 - num2) + " 입니다.")
+    },
+    calDevide : function(num1, num2) {
+        console.log(num1 + " 을 " + num2 + " 로 나눈 값은" + (num1/num2) + " 입니다.")
+    },
+    calMultiply : function(num1, num2) {
+        console.log(num1 + " 와 " + num2 + " 의 곱은" + (num1*num2) + " 입니다.")
+    },
+
 };
 
-
-player.sayHello("Donghee", 20);
-player.sayHello("LULU", 2);
-
+const calcPlus = calculator.calPlus(2, 3);
 
 
 
