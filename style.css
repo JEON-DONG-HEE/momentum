@@ -1,1 +1,7 @@
-body, h1{background:#eee;color:#333;}
+body {background:#eee;}
+
+h1 {font-size:100px;color:#7e8fe6;transition:color .4s ease-in-out;}
+
+h1.on {color:#fcba03;}
+
+.sexy_font {font-family:'Times New Roman', Times, serif;}
