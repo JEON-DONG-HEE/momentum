@@ -12,5 +12,8 @@ function getClock() {
     clock.innerText = `${getHour}:${getMinute}:${getSecond}`;
 };
 
-getClock();
+getClock(); // 실행시 getClock 이 1초의 interval 이 있기 때문에, interval 이 없도록 최초에 한번 실행해 준다
 setInterval(getClock, 1000);
+
+
+
