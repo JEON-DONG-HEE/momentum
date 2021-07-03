@@ -2,7 +2,7 @@ const toDoForm = document.querySelector("#todo_form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector(".list_todo");
 
-const toDos = [];
+let toDos = []; // 로컬 스토리지의 내용이 변경될 수 있도록 let 으로 변경
 const TODOS_KEY = "toDos";
 
 function deleteToDo(event) {
@@ -37,20 +37,14 @@ function handleToDoSubmit(event) {
     saveTodo();
 }
 
-// function sayHello(item) {
-//     console.log("안녕하세요", item);
-// }
-
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
 
-console.log(savedTodos);
-
 if (savedTodos !== null) {
     const parseTodos = JSON.parse(savedTodos);
-    console.log(parseTodos);
-    parseTodos.forEach((item) => console.log("안녕하세요", item));  // arrow function(화살표 함수) 로 sayHello() 와 동일 하다
+    toDos = parseTodos; // 기존 localStorage 에 있던 값을 그대로 받아온 후 새로운 할 일 목록이 추가되도록, 기존 값 받아서 업데이트
+    parseTodos.forEach(paintToDo);
 }
 
 
