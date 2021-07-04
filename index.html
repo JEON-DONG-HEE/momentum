@@ -4,32 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Momentum App</title>
 </head>
 <body>
 
-    <div class="clock">00:00</div>
-    <form id="login_form" class="hidden">
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="login">
-    </form>
+    <div id="container">
+        <div class="clock">00:00</div>
+        <form id="login_form" class="hidden">
+            <input class="userInputName" required maxlength="15" type="text" placeholder="이름을 입력하세요" />
+            <input type="submit" value="Login">
+        </form>
 
-    <div class="user_name hidden"></div>
+        <div class="user_name hidden"></div>
 
-    <form id="todo_form">
-        <input type="text" required placeholder="할일을 입력해주세요">
-    </form>
-    <ul class="list_todo"></ul>
+        <form id="todo_form">
+            <input type="text" required placeholder="할일을 입력해주세요">
+        </form>
+        <ul class="list_todo"></ul>
 
-    <div class="quote">
-        <span></span>
-        <span></span>
-    </div>
+        <div class="quote">
+            <span></span>
+            <span></span>
+        </div>
 
-    <div class="weather">
-        <span></span>
-        <span></span>
+        <div class="weather">
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
 <script src="./js/greetings.js"></script>
